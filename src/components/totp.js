@@ -1,3 +1,5 @@
+import cp from '../lib/cp'
+
 export default {
   name: 'Totp',
   props: {
@@ -32,6 +34,9 @@ export default {
     updateTimer(){
       this.resttime = 30 - Math.round((new Date()).getTime() / 1000) % 30
       this.totp = this.getTotp()
+    },
+    tap(){
+      cp(this.totp)
     }
   }
 }

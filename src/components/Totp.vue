@@ -1,6 +1,6 @@
 <template>
 <div class="hello">
-  <h1>{{ totp }}</h1>
+  <h1 v-on:click="tap">{{ totp }}</h1>
   <div class="form">
     <label for="secret">secret</label>
     <input v-model="secret" type="password" id="secret"/>
